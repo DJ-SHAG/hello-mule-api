@@ -1,0 +1,27 @@
+{
+  "configs": [
+    "chenni_a_20-nexus-repo-demo.xml"
+  ],
+  "secureProperties": [],
+  "supportedJavaVersions": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:chenni_a_20-nexus-repo-demo:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.7.1",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api-dev.yaml",
+        "api-test.yaml",
+        "chenni_a_20-nexus-repo-demo.xml",
+        "log4j2.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

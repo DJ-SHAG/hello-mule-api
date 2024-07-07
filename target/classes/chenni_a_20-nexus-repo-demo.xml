@@ -14,6 +14,6 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 	<flow name="chenni_a_20-nexus-repo-demoFlow" doc:id="dba6ae39-1332-4d9c-9384-a4bd9461e43e" >
 		<http:listener doc:name="Listener" doc:id="f57762f7-2ade-422e-982c-fe15c61446d4" config-ref="HTTP_Listener_config" path="test"/>
 		<logger level="INFO" doc:name="Logger" doc:id="bb7a42cf-4971-4e1c-9bd0-3252815c4dd4" message="test"/>
-		<set-payload value='#["Welcome to mule"]' doc:name="Set Payload" doc:id="8ad106e2-fd42-4502-9390-0cf2294ef3b1" />
+		<set-payload value='#["Welcome to mule jenkins deploy"]' doc:name="Set Payload" doc:id="8ad106e2-fd42-4502-9390-0cf2294ef3b1" />
 	</flow>
 </mule>

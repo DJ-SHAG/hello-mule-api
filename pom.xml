@@ -32,7 +32,6 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>dev-mule-hello-api-dev</applicationName>
-								<muleVesion>4.7.1<muleVersion>
 								<environment>dev</environment>
 								<region>us-east-1</region>
 								<workers>1</workers>

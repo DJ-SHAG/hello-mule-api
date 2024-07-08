@@ -15,8 +15,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.7.1-java8</app.runtime>
-		<mule.maven.plugin.version>4.2.0</mule.maven.plugin.version>
+		<app.runtime>4.7-java8</app.runtime>
+		<mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
 	</properties>
 
 	<profiles>
@@ -32,6 +32,7 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>dev-mule-hello-api-dev</applicationName>
+								<muleVesion>4.7.1<muleVersion>
 								<environment>dev</environment>
 								<region>us-east-1</region>
 								<workers>1</workers>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="chenni_a_20-nexus-repo-demo-test-suite.xml" />
+	<munit:test name="chenni_a_20-nexus-repo-demo-test-suite-chenni_a_20-nexus-repo-demoFlowTest" doc:id="aedafc78-6be1-4503-84cc-4b3afd9c8d4e" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to chenni_a_20-nexus-repo-demoFlow" doc:id="d39c3e04-75e1-44f5-a1bb-32d84ded0751" name="chenni_a_20-nexus-repo-demoFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<logger level="INFO" doc:name="Logger" doc:id="fab3c8b1-7435-492b-8fae-a97152851cca" message="#[payload]"/>
+			<munit-tools:assert doc:name="Assert expression" doc:id="499a55fc-b2da-4b56-b57f-f2b1c332f983" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

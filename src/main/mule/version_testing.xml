@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="version_testingFlow" doc:id="e3e3b01a-ee12-473d-bfca-b40b82652086" >
+		<http:listener doc:name="Listener" doc:id="15a940c0-721b-4073-8e35-f65236a7621c" config-ref="HTTP_Listener_config" path="version_test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="e0c961fa-5433-44c0-b5c3-b620db178cbd" message="start"/>
+		<ee:transform doc:name="Transform Message" doc:id="d1e7e085-32ad-461e-96ea-6fc554de9b67" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"version" : server.mule.version
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
